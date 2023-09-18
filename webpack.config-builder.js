@@ -39,7 +39,7 @@ const LOCAL_ENV = {
   BUILD_NO_SERVER: BUILD.NO_SERVER,
   CSS_PREFIX: "dm-",
   API_GATEWAY: "http://localhost:8081/api/dm",
-  LS_ACCESS_TOKEN: "",
+  LS_ACCESS_TOKEN: "e11142c65b3a0d51c76c4519ef5a27dfed484c4e",
 };
 
 const babelOptimizeOptions = () => {
