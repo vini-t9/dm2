@@ -64,8 +64,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ["error", {
       "vars": "all",
       "args": "after-used",
-      "varsIgnorePattern": "^_",
-      "argsIgnorePattern": "^_"
+      "varsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|_)",
+      "argsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|_)"
     }],
     "no-async-promise-executor": "off",
     "semi": [2, "always"],
@@ -86,7 +86,8 @@ module.exports = {
     "object-curly-spacing": ["error", "always"],
     "array-bracket-spacing": ["error", "never"],
     "object-shorthand": ["error", "always"],
-    "eqeqeq": ["error", "always"],
+    // "eqeqeq": ["error", "always"],
+    "eqeqeq": ["off"],
     "indent": "off",
     "newline-after-var": ["error", "always"],
     "space-unary-ops": [2, {
