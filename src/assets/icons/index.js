@@ -15,3 +15,5 @@ export { default as CommentRed } from "./comment_red.svg";
 export { default as LsGrid } from "./grid.svg";
 export { default as LsList } from "./list.svg";
 export { default as LsRefresh2 } from "./refresh2.svg";
+export { default as LsGridicon } from "./gridicon.svg";
+export { default as LsListicon } from "./listicon.svg";

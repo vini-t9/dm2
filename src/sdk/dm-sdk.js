@@ -55,7 +55,7 @@ import { createApp } from "./app-create";
 import { LSFWrapper } from "./lsf-sdk";
 import { taskToLSFormat } from "./lsf-utils";
 
-const DEFAULT_TOOLBAR = "actions columns filters ordering label-button loading-possum error-box | refresh import-button export-button view-toggle";
+const DEFAULT_TOOLBAR = "actions columns filters ordering view-toggle loading-possum error-box | refresh import-button export-button label-button";
 
 const prepareInstruments = (instruments) => {
   const result = Object

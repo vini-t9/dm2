@@ -12,7 +12,8 @@ export const initDevApp = async (DataManager) => {
 
   const dm = new DataManager({
     root: document.getElementById("app"),
-    toolbar: "actions columns filters ordering review-button label-button loading-possum error-box | refresh view-toggle",
+    toolbar: "actions columns filters ordering view-toggle loading-possum error-box | refresh label-button",
+    //review-button is commented out because it is not yet implemented in the new UI
     apiGateway: gatewayAPI,
     apiVersion: 2,
     apiMockDisabled: useExternalSource,
