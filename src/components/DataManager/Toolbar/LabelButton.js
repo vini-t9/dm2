@@ -115,7 +115,7 @@ export const LabelButton = injector(({ store, canLabel, size, target, selectedCo
           mod={{ size: size ?? "medium", disabled }}
           onClick={onLabelVisible}
         >
-          Label Tasks As Displayed
+          Label Tasks As Display
         </Button>
       </div>
     </Interface>
