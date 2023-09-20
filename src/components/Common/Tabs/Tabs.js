@@ -58,7 +58,7 @@ export const Tabs = ({
           )}
         </Elem>
       </Block>
-      <Block name="tabs">
+      <Block name="tabsextra">
         <Elem name="extra">
           {tabBarExtraContent}
         </Elem>
