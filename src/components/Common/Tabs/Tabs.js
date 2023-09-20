@@ -57,6 +57,8 @@ export const Tabs = ({
             />
           )}
         </Elem>
+      </Block>
+      <Block name="tabs">
         <Elem name="extra">
           {tabBarExtraContent}
         </Elem>

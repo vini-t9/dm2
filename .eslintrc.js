@@ -64,8 +64,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ["error", {
       "vars": "all",
       "args": "after-used",
-      "varsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|_)",
-      "argsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|_)"
+      "varsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|s|u|_)",
+      "argsIgnorePattern": "^(t|r|o|n|e|a|p|l|i|s|u|_)"
     }],
     "no-async-promise-executor": "off",
     "semi": [2, "always"],
