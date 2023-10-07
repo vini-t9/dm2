@@ -1,5 +1,5 @@
 import { inject } from "mobx-react";
-import { FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp  } from "react-icons/fa";
 import { Button } from "../../Common/Button/Button";
 import { FieldsButton } from "../../Common/FieldsButton";
 import { Space } from "../../Common/Space/Space";
@@ -48,7 +48,7 @@ export const OrderButton = injector(({ size, ordering, view, ...rest }) => {
           size={size}
           style={{ color: "#595959" }}
           disabled={!!ordering === false}
-          icon={ordering?.desc ? <FaSortAmountUp/> : <FaSortAmountDown/>}
+          icon={ordering?.desc ? <FaChevronDown size="12" style={{ color: '#0077ff' }}/> : <FaChevronUp size="12" style={{ color: '#0077ff' }}/>}
           onClick={() => view.setOrdering(ordering?.field)}
         />
       </Button.Group>

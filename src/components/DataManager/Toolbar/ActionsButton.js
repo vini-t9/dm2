@@ -77,12 +77,12 @@ export const ActionsButton = injector(observer(({ store, size, hasSelected, ...r
       parentRef?.current?.close?.();
     }, [store.currentView?.selected]);
     const titleContainer = (
-      <Block 
+      <Block
         key={action.id}
         tag={Menu.Item}
         size={size}
         onClick={onClick}
-        mod={{ 
+        mod={{
           hasSeperator: isDeleteAction,
           hasSubMenu: action.children?.length > 0,
           isSeparator: action.isSeparator,
@@ -98,8 +98,8 @@ export const ActionsButton = injector(observer(({ store, size, hasSelected, ...r
       </Block>
     );
 
-    return hasChildren  ? (
-      <Dropdown.Trigger 
+    return hasChildren ? (
+      <Dropdown.Trigger
         key={action.id}
         align="top-right-outside"
         toggle={false}
@@ -107,10 +107,10 @@ export const ActionsButton = injector(observer(({ store, size, hasSelected, ...r
         content={<Block name='actionButton-submenu' tag="ul" mod={{ newUI: isNewUI }}>{action.children.map(ActionButton, parentRef)}</Block>}
       >
         {titleContainer}
-      </Dropdown.Trigger>  
+      </Dropdown.Trigger>
     ) : (
       isNewUI ? (
-        <Dropdown.Trigger 
+        <Dropdown.Trigger
           key={action.id}
           align="top-right-outside"
           toggle={false}
@@ -136,15 +136,15 @@ export const ActionsButton = injector(observer(({ store, size, hasSelected, ...r
 
   const actionButtons = actions.map(ActionButton);
   const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "Record" : "Task";
-  
+
   return (
-    <Dropdown.Trigger 
-      content={isNewUI ? <Block tag={Menu} name="actionmenu" size="compact" mod={{ newUI: isNewUI }}>{actionButtons}</Block> : <Menu size="compact">{actionButtons}</Menu>} 
+    <Dropdown.Trigger
+      content={isNewUI ? <Block tag={Menu} name="actionmenu" size="compact" mod={{ newUI: isNewUI }}>{actionButtons}</Block> : <Menu size="compact">{actionButtons}</Menu>}
       disabled={!hasSelected}
       onToggle={(visible) => isFFLOPSE3 && setIsOpen(visible)}
     >
-      <Button {...(isNewUI ? { className:"actionButtonPrime" } : {})} size={size} disabled={!hasSelected} {...rest}>
-        {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}`: "Actions"}
+      <Button {...(isNewUI ? { className: "actionButtonPrime" } : {})} size={size} disabled={!hasSelected} {...rest}>
+        {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "Actions"}
         {isNewUI ? (
           isOpen ? (
             <FaChevronUp size="12" style={{ marginLeft: 4, marginRight: -7 }} />

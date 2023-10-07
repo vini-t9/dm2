@@ -28,6 +28,9 @@ export const RefreshButton = injector(({ store, needsDataFetch, projectFetch, si
         minWidth: 0,
         padding: 0,
         width: isNewUI ? 40 : 32,
+        backgroundColor: '#fff',
+        color: '#1A73E8',
+        boxShadow: '0px 0px 0px 1px #1A73E8',
       }}
       {...rest}
     >

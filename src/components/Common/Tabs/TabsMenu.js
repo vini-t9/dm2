@@ -1,5 +1,9 @@
 import { useMemo } from 'react';
 import { Menu } from "../Menu/Menu";
+import { BiPencil } from "react-icons/bi";
+import { HiOutlineDocumentDuplicate } from "react-icons/hi";
+import { RiCloseLine } from "react-icons/ri";
+
 
 export const TabsMenu = ({
   onClick,
@@ -10,12 +14,14 @@ export const TabsMenu = ({
 }) => {
   const items = useMemo(() => [{
     key: 'edit',
-    title: 'Rename',
+    title: 'Rename Tab',
+    icon: <BiPencil/>,
     enabled: editable && !virtual,
     action: () => onClick("edit"),
   }, {
     key: 'duplicate',
-    title: 'Duplicate',
+    title: 'Duplicate Tab',
+    icon: <HiOutlineDocumentDuplicate/>,
     enabled: !virtual && clonable,
     action: () => onClick("duplicate"),
   }, {
@@ -31,15 +37,16 @@ export const TabsMenu = ({
     <Menu size="medium" onClick={(e) => e.domEvent.stopPropagation()}>
       {items.map((item) => item.enabled ? (
         <Menu.Item key={item.key} onClick={item.action}>
-          {item.title}
+          {item.icon}{item.title}
         </Menu.Item>
       ) : null)}
 
       {closable ? (
         <>
-          {showDivider && <Menu.Divider />}
+          {/* {showDivider && <Menu.Divider />}  */}
           <Menu.Item onClick={() => onClick("close")}>
-            Close
+            <RiCloseLine/>Close Tab
+
           </Menu.Item>
         </>
       ) : null}

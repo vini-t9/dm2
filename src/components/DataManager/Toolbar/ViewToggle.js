@@ -20,12 +20,26 @@ export const ViewToggle = viewInjector(observer(({ view, size, ...rest }) => {
     >
       <RadioGroup.Button value="list">
         <Tooltip title="List view">
-          {isDatasetsFF ? <LsList /> : <span><LsListicon/></span>}
+          {isDatasetsFF ? (
+            <LsList />
+          ) : (
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <LsListicon />
+              <span style={{ marginLeft: '8px' }}>List</span>
+            </span>
+          )}
         </Tooltip>
       </RadioGroup.Button>
       <RadioGroup.Button value="grid">
         <Tooltip title="Grid view">
-          {isDatasetsFF ? <LsGrid /> : <span><LsGridicon/></span>}
+          {isDatasetsFF ? (
+            <LsGrid />
+          ) : (
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <LsGridicon />
+              <span style={{ marginLeft: '8px' }}>Grid</span>
+            </span>
+          )}
         </Tooltip>
       </RadioGroup.Button>
     </RadioGroup>

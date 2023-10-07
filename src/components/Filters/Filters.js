@@ -1,6 +1,7 @@
 import { inject } from "mobx-react";
 import React from "react";
-import { FaCaretSquareRight, FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import { AiOutlineSplitCells } from "react-icons/ai";
 import { Block, cn, Elem } from "../../utils/bem";
 import { Button } from "../Common/Button/Button";
 import { Icon } from "../Common/Icon/Icon";
@@ -87,7 +88,7 @@ export const Filters = injector(({ views, currentView, filters }) => {
               about="Pin to sidebar"
               onClick={() => views.expandFilters()}
               style={{ display: "inline-flex", alignItems: "center" }}
-              icon={<Icon icon={FaCaretSquareRight} size={18} />}
+              icon={<Icon icon={AiOutlineSplitCells} size={18} />}
             />
           </Tooltip>
         ) : null}
